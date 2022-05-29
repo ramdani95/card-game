@@ -1,12 +1,10 @@
-const readlineSync = require("readline-sync");
+//const readlineSync = require("readline-sync");
 
 // getInput() is a function that takes a `prompt` as an argument which
 // is a question (string) to ask the user.
 // the returning value of getInput() is a string of whatever the user has typed as the response
 
-function getInput(prompt) {
-  return readlineSync.question(`${prompt}: `);
-}
+
 
 // YOUR CODE STARTS HERE!!
 
@@ -14,22 +12,78 @@ function getInput(prompt) {
 
 //buildDeck.push and position array
 // 1. use a function declaration to create a buildDeck function.
-// 2. inside the buildDeck function, create an array called "suits" that lists all four suits from a deck of card as strings.
-// 3. inside the buildDeck function, create a 2nd array called "ranks" that lists all 13 cards from ace to King as strings.
-// 4. inside the buildDeck function, create an empty array called "deck"
-// 5. inside the buildDeck function, create a for loop INSIDE of another for loop. The outer loop should loop through the ranks. The inner loop should loop through the suits. Make sure to use different variables for your iterators.
-// 6. inside your inner for loop, push your looped iterations of ranks and suits as OBJECTS into the empty deck array. Add a third property to this object with the key "value" and the value equal to the current iterator.
-// HINT: The result of step 6 is that each card will be an object inside of the deck array, for example [{suit: "diamonds", rank: "A", value: 0}, {suit: "diamonds", rank: "2", value: 1},...{etc}]. For example, if we wanted to organize the players and teams of the NBA with index numbers, we could write: nba.push({player: players[i], team: teams[n], index: i})
-// 7. After your loops, return deck, which should now return an array full of card objects if you were to run buildDeck().
 
-// STEP TWO - Shuffling your deck
-// 1. use a function declaration to create a function called shuffle that takes deck as an argument.
-// 2. Inside this function create a variable called "shuffledDeck" that takes deck as its value.
-// 3. Using "let" declare three new variables: currentIndex, whos value should equal the length of the deck array, and two more: temporaryValue and randomIndex, each of which should currently have no value assigned.
-// 4. Create a while loop whos condition is that "currentIndex" does not equal 0, so that we stop looping once we've gone through all 52 cards.
+function buildDeck() {
+  const suits = ["Diamond", "Club", "Heart", "Spade"];
+    const ranks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+    let deck =[];
+    console.log(buildDeck());
+    
+    for (a=0;a<ranks.length;a++){
+      for (i=0;i<suits.length;i++) {
+
+  console.log(suits[i]);
+  console.log(ranks[a]);
+   let deckObject={Suit:suits[i], Rank:ranks[a]};
+     deck.push= [{Suit:Diamond, rank:A, value:0},{Suit:Diamond, rank:2, value:1},{Suit:Diamond, rank:3, value:2},
+     {Suit:Diamond, rank:4, value:3}, {Suit:Diamond, rank:5, value:4}, {Suit:Diamond, rank:6, value:5}, {Suit:Diamond, rank:7, value:6},
+     {Suit:Diamond, rank:8, value:7}, {Suit:Diamond, rank:9, value:8},{Suit:Diamond, rank:10, value:9}, {Suit:Diamond, rank:J, value:10},
+     {Suit:Diamond, rank:Q, value:11}, {Suit:Diamond, rank:K, value:12}], [{Suit:Club, rank:A, value:0},{Suit:Club, rank:2, value:1},
+     {Suit:Club, rank:3, value:2},{Suit:Club, rank:4, value:3}, {Suit:Club, rank:5, value:4}, {Suit:Club, rank:6, value:5},
+     {Suit:Club, rank:7, value:6},{Suit:Club, rank:8, value:7}, {Suit:Club, rank:9, value:8},{Suit:Club, rank:10, value:9},
+     {Suit:Club, rank:J, value:10}, {Suit:Club, rank:Q, value:11}, {Suit:Club, rank:K, value:12}], [{Suit:Heart, rank:A, value:0},
+     {Suit:Heart, rank:2, value:1}, {Suit:Heart, rank:3, value:2}, {Suit:Heart, rank:4, value:3}, {Suit:Heart, rank:5, value:4}, 
+     {Suit:Heart, rank:6, value:5}, {SuitSuit:Heart, rank:7, value:6}, {Suit:Heart, rank:8, value:7}, {Suit:Heart, rank:7, value:6}, 
+     {Suit:Heart, rank:8, value:7}, {Suit:Heart, rank:9, value:8}, {Suit:Heart, rank:10, value:9},{Suit:Heart, rank:J, value:10}, 
+     {Suit:Heart, rank:Q, value:11}, {Suit:Heart, rank:K, value:12}], [{Suit:Spade, rank:A, value:0}, {Suit:Spade, rank:2, value:1}, 
+     {Suit:Spade, rank:3, value:2}, {Suit:Spade, rank:4, value:3}, {Suit:Spade, rank:5, value:4}, {Suit:Spade, rank:6, value:5}, 
+     {Suit:Spade, rank:7, value:6}, {Suit:Spade, rank:8, value:7}, {Suit:Spade, rank:9, value:8}, {Suit:Spade, rank:10, value:9}, 
+     {Suit:Spade, rank:J, value:10}, {Suit:Spade, rank:Q, value:11}, {Suit:Spade, rank:K, value:12}];
+
+  
+
+}   }
+return deck;
+}
+
+console.log(buildDeck);
+
+
+function shuffle(deck) {
+  let shuffledDeck= deck;
+  let currentIndex = deck.length;
+  let temporaryValue = 0; 
+  let randomIndex = 0; 
+  
+}
+while (currentIndex !== 0) {
+  if (currentIndex =52) { 
+    console.log("stop looping")
+    
+  }
+  else (currentIndex > 52)
+  console.log("keep looping")
+ let randomInt= math.floor(Math.random()*currentIndex) 
+ 
+{
+ const array = [temporaryValue, shuffledDeck, currentIndex];
+ var shuffledDeck, randomIndex=shuffledDeck (currentIndex);
+ let shuffledDeck, randomIndex= 
+
+   
+  
+}
+  
+
+
+
+
+
 // 5. Inside the while loop, use the javascript Math.methods to generate a random integer between 0 and "currentIndex"
 // 6. Inside the while loop, decrement current index by 1. (should be after step 9)
 // 7. Inside the while loop, assign "temporaryValue" with "shuffledDeck" (which is an array) to the [currentIndex].
+
+
 // 8. Still inside, assign "shuffledDeck[currentIndex]" a value of shuffledDeck to the [randomIndex]
 // 9. Still inside, assign "shuffledDeck[randomIndex]" a value of "temporaryValue".  (currentIndex //i--;)
 // 10. Review the code from steps 7,8, and 9, and leave a comment explaining what you believe those lines of code are doing as they swap assignments of values between them.
